@@ -5,8 +5,11 @@ Built using Java, Selenium-Gradle, Cucumber.
 Exercise on testscriptdemo.com website
 
 ### **Scenarios covered**
-1. Order a T-shirt and verify in order history
-2. Update personal information (first name) in My Account.
+    Given I add four "<SearchCategory>" different products to my wishlist
+    When I view my wishlist table and find total four "<ItemCount>" selected items in my wishlist
+    And I search for lowest price product
+    And I am able to add the lowest price item to my cart
+    Then I am able to verify the item in cart
 
 ### **How To Run Tests**
 **Gradle Wrapper Command Line Test Runs** 
@@ -27,11 +30,11 @@ Create a run configuration. This will allow you to run Scenarios by right clicki
     - Program Arguments _(copy and paste this into the program arguments after expanding)_
     ```
     -p
-    pretty
-    --add-plugin
-    de.monochromata.cucumber.report.PrettyReports:TestResults/Reports/cucumber-html
-    -p
-    json:TestResults/Reports/cucumber-report.json
+pretty
+-p
+html:TestResults/Reports/cucumber-report.html
+-p
+json:TestResults/Reports/cucumber-report.json
     ```
     - Feature or folder path: `/path/to/features`
         - Example `/Users/your_username/project_name/src/test/resources/features`

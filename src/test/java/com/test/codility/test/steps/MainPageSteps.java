@@ -1,11 +1,12 @@
 package com.test.codility.test.steps;
 
+import com.test.codility.setup.Hooks;
 import com.test.codility.test.pages.pages.MainPage;
 import io.cucumber.java.en.Given;
 
 public class MainPageSteps {
 
-  private MainPage page;
+  private final MainPage page;
   String product;
 
   public MainPageSteps(MainPage page) {
@@ -14,10 +15,11 @@ public class MainPageSteps {
   }
 
   @Given("I add four {string} different products to my wishlist")
-  public void iAddFourDiffProductsToMyWishlist(String itemcount){
+  public void iAddFourDiffProductsToMyWishlist(String SearchCategory){
     page.navigateHere();
     page.isPageReady();
-    page.selectProduct("All Categories");
+    Hooks.takeScreenshot();
+    page.selectProduct(SearchCategory);
   }
 
 }

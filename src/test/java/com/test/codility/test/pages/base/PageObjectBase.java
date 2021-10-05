@@ -3,6 +3,9 @@ package com.test.codility.test.pages.base;
 import com.test.codility.setup.Config;
 import com.test.codility.setup.Hooks;
 import com.test.codility.utilities.Tools;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 import org.apache.commons.io.FileUtils;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
@@ -31,6 +34,16 @@ import static java.lang.String.format;
 public abstract class PageObjectBase {
   public RemoteWebDriver driver;
   public SoftAssertions soft = Hooks.getSoftAssert();
+
+  protected String getProductName() {
+    return productName;
+  }
+
+  protected void setProductName(String productName) {
+    this.productName = productName;
+  }
+
+  protected String productName;
 
   public PageObjectBase() {
     this.driver = Hooks.getDriver();
