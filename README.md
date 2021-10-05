@@ -42,7 +42,8 @@ json:TestResults/Reports/cucumber-report.json
 ### **Test Results**
 - Reports and screenshots are located here for local viewing!!! ```C:\Users\yourUserHere\git-projects\projectName\TestResults```
 - Cucumber report attached
-![CodilityExerciseCucumberReport](https://user-images.githubusercontent.com/83782547/117734694-e3127280-b1eb-11eb-86b1-27d709225a99.PNG)
+![cucumber report](https://user-images.githubusercontent.com/66088198/136119320-974cd55b-a5a4-4abe-b127-a905915d5e0e.png)
+
 
 ### **Author**
 **_Arwin_**
